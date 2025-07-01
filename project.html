@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+    
+    <head>
+  <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="Explore web development projects by Muhammad Hamza Kabeer using JavaScript, Firebase, Tailwind CSS, and more." />
+<meta name="keywords" content="Hamza Projects, Web Development Portfolio, Firebase Projects, JavaScript Projects, Tailwind CSS Work, Frontend Showcase" />
+<meta name="author" content="Muhammad Hamza Kabeer" />
+<meta name="robots" content="index, follow" />
+<meta property="og:title" content="Projects | Hamza - Frontend Developer" />
+<meta property="og:description" content="List of live and demo projects built using modern web development tools and frameworks." />
+<link rel="icon" href="assets/images/muhammadhamzakabeer.png" type="image/png" />
+ <title>Muhammad Hamza Kabeer | Frontend Developer Portfolio</title>
+    <link rel="preload" href="css/project.css" as="style" onload="this.rel='stylesheet'">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    screens: {
+                        'xs': '475px',
+                    },
+                    keyframes: {
+                        slideIn: {
+                            '0%': { transform: 'translateY(20px)', opacity: '0' },
+                            '100%': { transform: 'translateY(0)', opacity: '1' },
+                        },
+                        progress: {
+                            '0%': { width: '0%' },
+                            '100%': { width: '100%' },
+                        },
+                        fadeIn: {
+                            '0%': { opacity: '0' },
+                            '100%': { opacity: '1' },
+                        },
+                        scalePulse: {
+                            '0%': { transform: 'scale(1)' },
+                            '50%': { transform: 'scale(1.1)' },
+                            '100%': { transform: 'scale(1)' },
+                        },
+                        gradientShift: {
+                            '0%': { backgroundPosition: '0% 50%' },
+                            '50%': { backgroundPosition: '100% 50%' },
+                            '100%': { backgroundPosition: '0% 50%' },
+                        },
+                        premiumGrow: {
+                            '0%': { transform: 'scale(1) translateY(0)' },
+                            '100%': { transform: 'scale(1.02) translateY(-4px)' },
+                        },
+                        glowPulse: {
+                            '0%': { boxShadow: '0 0 5px 0 rgba(59, 130, 246, 0.3)' },
+                            '50%': { boxShadow: '0 0 25px 5px rgba(59, 130, 246, 0.9)' },
+                            '100%': { boxShadow: '0 0 5px 0 rgba(59, 130, 246, 0.3)' },
+                        },
+                    },
+                    animation: {
+                        slideIn: 'slideIn 0.5s ease-out',
+                        progress: 'progress 0.5s ease-out',
+                        fadeIn: 'fadeIn 0.5s ease-out',
+                        scalePulse: 'scalePulse 0.4s ease-in-out',
+                        gradientShift: 'gradientShift 3s ease infinite',
+                        premiumGrow: 'premiumGrow 0.3s cubic-bezier(0.25, 0.1, 0.25, 1) forwards',
+                        glowPulse: 'glowPulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                    },
+                    backgroundImage: {
+                        'gradient-border': 'linear-gradient(45deg, #3b82f6, #8b5cf6, #ec4899, #3b82f6)',
+                    },
+                    boxShadow: {
+                        'default-glow': '0 2px 8px rgba(59, 130, 246, 0.2)',
+                        'premium-glow': '0 4px 20px rgba(59, 130, 246, 0.6)',
+                    },
+                }
+            }
+        };
+    </script>
+<link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" as="style" onload="this.rel='stylesheet'">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" as="style" onload="this.rel='stylesheet'">
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&display=swap" as="style" onload="this.rel='stylesheet'">
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" as="style" onload="this.rel='stylesheet'">
+</head>
+
+<body class="text-gray-800 dark:text-white font-sans scroll-smooth">
+    <div class="fixed-bg"></div>
+    <div class="scroll-progress">
+        <div class="scroll-progress-bar"></div>
+    </div>
+    <header id="desktop-header" class="fixed top-0 left-0 w-full h-20 z-50 hidden lg:block transition-all duration-300">
+        <div class="max-w-[1280px] mx-auto flex justify-between items-center px-4 sm:px-6 lg:px-8 h-full">
+            <div class="signature-container flex items-center">
+                <a href="index.html">
+                    <h1 class="signature text-3xl font-bold text-blue-600 flex items-center">M.Hamza Kabeer</h1>
+                </a>
+            </div>
+            <nav class="flex justify-center space-x-6 items-center">
+                <a href="index.html" class="desktop-nav-item"><i
+                        class="fa-sharp fa-solid fa-house"></i><span>Home</span></a>
+                <a href="about.html" class="desktop-nav-item"><i
+                        class="fa-sharp fa-solid fa-user"></i><span>About</span></a>
+                <a href="about.html#skills" class="desktop-nav-item"><i
+                        class="fa-sharp fa-solid fa-graduation-cap"></i><span>Skills</span></a>
+                <a href="project.html" class="desktop-nav-item"><i
+                        class="fa-sharp fa-solid fa-diagram-project"></i><span>Projects</span></a>
+                <a href="contact.html" class="desktop-nav-item"><i
+                        class="bi-chat-square-text"></i><span>Contact</span></a>
+                <button id="theme-toggle-desktop"
+                    class="text-xl text-gray-800 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-600 transition-colors duration-300 p-2 rounded"
+                    aria-label="Toggle dark mode">
+                    <i id="theme-icon-desktop" class="fas fa-moon"></i>
+                </button>
+            </nav>
+        </div>
+    </header>
+    <header id="mobile-top-header"
+        class="fixed top-0 left-0 w-full min-h-16 z-[60] flex justify-between items-center px-4 lg:hidden transition-all duration-300">
+        <a href="index.html">
+            <h1 class="signature text-4xl font-bold text-blue-600 flex items-center">Hamza</h1>
+        </a>
+        <div class="flex items-center space-x-4">
+            <button id="theme-toggle-mobile"
+                class="text-xl text-gray-800 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-600 transition-colors duration-300 p-2 rounded"
+                aria-label="Toggle dark mode">
+                <i id="theme-icon-mobile" class="fas fa-moon"></i>
+            </button>
+            <button id="menu-toggle" class="flex flex-col justify-center items-center w-8 h-8 space-y-1.5 z-[70] p-1">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+    <div id="mobile-menu"
+        class="lg:hidden fixed inset-0 flex flex-col justify-center items-center bg-white dark:bg-gray-900 space-y-8 text-xl font-semibold text-gray-800 dark:text-white opacity-0 scale-95 pointer-events-none transform transition-all duration-300 z-40">
+        <a href="index.html" class="hover:text-blue-600 transition">Home</a>
+        <a href="about.html" class="hover:text-blue-600 transition">About</a>
+        <a href="about.html#skills" class="hover:text-blue-600 transition">Skills</a>
+        <a href="project.html" class="hover:text-blue-600 transition">Projects</a>
+        <a href="contact.html" class="hover:text-blue-600 transition">Contact</a>
+    </div>
+    <nav id="mobile-bottom-nav"
+        class="fixed bottom-0 left-0 w-full h-16 z-50 flex justify-around items-center px-4 lg:hidden transition-all duration-300">
+        <a href="index.html" class="nav-link-icon"><i class="fas fa-home"></i><span>Home</span></a>
+        <a href="about.html" class="nav-link-icon"><i class="fas fa-user"></i><span>About</span></a>
+        <a href="project.html" class="nav-link-icon"><i class="fas fa-laptop-code"></i><span>Projects</span></a>
+        <a href="contact.html" class="nav-link-icon"><i class="bi-chat-square-text"></i><span>Contact</span></a>
+    </nav>
+    <section id="projects" class="scroll-mt-40 pt-28 px-4 sm:px-6">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-4xl sm:text-5xl font-extrabold mb-4 text-center text-[#2563eb] animate-fadeIn">Selected
+                Works</h2>
+            <p
+                class="text-lg sm:text-xl text-[#2563eb] text-gray-600 dark:text-gray-300 mb-16 text-center animate-fadeIn">
+                A curated selection of my most recent and impactful work.</p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="project-card animate-slideIn" style="animation-delay: 0.1s;">
+                    <div class="inner">
+                        <div class="mb-4">
+                            <img src="assets/images/elite-web.png" alt="Project One Screenshot"
+                                class="w-full h-48 object-cover rounded-lg">
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-800 dark:text-white mb-3">Elite Store</h3>
+                        <p class="text-sm text-gray-600 dark:text-gray-300 mb-4">A modern e-commerce-style website
+                            showcasing a laptop collection. Crafted with HTML, CSS, and JavaScript, it offers a clean,
+                            responsive design and interactive features for an intuitive user experience.
+                            Visit Project</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span
+                                class="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-300 text-xs font-semibold rounded-full">JavaScript</span>
+                            <span
+                                class="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-300 text-xs font-semibold rounded-full">Tailwind
+                                CSS</span>
+                        </div>
+                        <div class="flex gap-4">
+                            <a href="https://mdhamzakabeer.github.io/laptopCollections/" target="_blank"
+                                class="inline-flex items-center px-4 py-2 bg-blue-600 text-white text-sm font-medium rounded-md hover:bg-blue-700 transition-colors duration-300">Live
+                                Demo <i class="fas fa-external-link-alt ml-2"></i></a>
+                            <a href="https://github.com/mdhamzakabeer/laptopCollections"
+                                class="inline-flex items-center px-4 py-2 bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-white text-sm font-medium rounded-md hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors duration-300">Source
+                                Code <i class="fab fa-github ml-2"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card animate-slideIn" style="animation-delay: 0.2s;">
+                    <div class="inner">
+                        <div class="mb-4">
+                            <img src="assets/images/grow.png" alt="Project Two Screenshot"
+                                class="w-full h-48 object-fit rounded-lg">
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-800 dark:text-white mb-3">Grow Quiz</h3>
+                        <p class="text-sm text-gray-600 dark:text-gray-300 mb-4">An interactive quiz application built
+                            with HTML, CSS, and JavaScript. Features a user-friendly interface, responsive design, and
+                            dynamic question handling for an engaging learning experience.
+                            Visit Project</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span
+                                class="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-300 text-xs font-semibold rounded-full">Firebase</span>
+                            <span
+                                class="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-300 text-xs font-semibold rounded-full">email.js</span>
+
+                            <span
+                                class="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-300 text-xs font-semibold rounded-full">JavaScript</span>
+                        </div>
+                        <div class="flex gap-4">
+                            <a href="https://mdhamzakabeer.github.io/quizapp/" target="_blank"
+                                class="inline-flex items-center px-4 py-2 bg-blue-600 text-white text-sm font-medium rounded-md hover:bg-blue-700 transition-colors duration-300">Live
+                                Demo <i class="fas fa-external-link-alt ml-2"></i></a>
+                            <a href="https://github.com/mdhamzakabeer/quizapp"
+                                class="inline-flex items-center px-4 py-2 bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-white text-sm font-medium rounded-md hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors duration-300">Source
+                                Code <i class="fab fa-github ml-2"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card animate-slideIn" style="animation-delay: 0.3s;">
+                    <div class="inner">
+                        <div class="mb-4">
+                            <img src="assets/images/fighter-game.png" alt="Fighter Game Three Screenshot"
+                                class="w-full h-48 object-cover rounded-lg">
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-800 dark:text-white mb-3">Fighter Game</h3>
+                        <p class="text-sm text-gray-600 dark:text-gray-300 mb-4">A vibrant, arcade-inspired fighting
+                            game built with HTML, CSS, and JavaScript. Features dynamic animations, responsive controls,
+                            and an engaging user interface for a seamless gaming experience.
+                            Visit Project</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span
+                                class="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-300 text-xs font-semibold rounded-full">JavaScript</span>
+                        </div>
+                        <div class="flex gap-4">
+                            <a href="https://mdhamzakabeer.github.io/streetFighter/" target="_blank"
+                                class="inline-flex items-center px-4 py-2 bg-blue-600 text-white text-sm font-medium rounded-md hover:bg-blue-700 transition-colors duration-300">Live
+                                Demo <i class="fas fa-external-link-alt ml-2"></i></a>
+                            <a href="https://github.com/mdhamzakabeer/streetFighter"
+                                class="inline-flex items-center px-4 py-2 bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-white text-sm font-medium rounded-md hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors duration-300">Source
+                                Code <i class="fab fa-github ml-2"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card animate-slideIn" style="animation-delay: 0.4s;">
+                    <div class="inner">
+                        <div class="mb-4">
+                            <img src="assets/images/Untitled design (8).png" alt="SMIT Signup Form Screenshot"
+                                class="w-full h-48 object-cover rounded-lg">
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-800 dark:text-white mb-3">SMIT Signup Form</h3>
+                        <p class="text-sm text-gray-600 dark:text-gray-300 mb-4">A responsive signup form for SMIT,
+                            built with HTML, CSS, and JavaScript. Includes form validation, a clean design, and seamless
+                            user interaction for efficient registration.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span
+                                class="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-300 text-xs font-semibold rounded-full">HTML</span>
+                            <span
+                                class="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-300 text-xs font-semibold rounded-full">CSS</span>
+                            <span
+                                class="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-300 text-xs font-semibold rounded-full">JavaScript</span>
+                        </div>
+                        <div class="flex gap-4">
+                            <a href="https://mdhamzakabeer.github.io/smitsignupform/" target="_blank"
+                                class="inline-flex items-center px-4 py-2 bg-blue-600 text-white text-sm font-medium rounded-md hover:bg-blue-700 transition-colors duration-300">Live
+                                Demo <i class="fas fa-external-link-alt ml-2"></i></a>
+                            <a href="https://github.com/mdhamzakabeer/smitsignupform"
+                                class="inline-flex items-center px-4 py-2 bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-white text-sm font-medium rounded-md hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors duration-300">Source
+                                Code <i class="fab fa-github ml-2"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card animate-slideIn" style="animation-delay: 0.2s;">
+                    <div class="inner">
+                        <div class="mb-4">
+                            <img src="assets/images/Untitled design (31).png" alt="Salt n Pepper Screenshot"
+                                class="w-full h-48 object-cover rounded-lg">
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-800 dark:text-white mb-3">Salt n Pepper</h3>
+                        <p class="text-sm text-gray-600 dark:text-gray-300 mb-4">A restaurant website showcasing menus
+                            and services, built with HTML, CSS, and JavaScript. Features a modern, responsive design
+                            with smooth animations and an intuitive user interface.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span
+                                class="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-300 text-xs font-semibold rounded-full">HTML</span>
+                            <span
+                                class="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-300 text-xs font-semibold rounded-full">CSS</span>
+                            <span
+                                class="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-300 text-xs font-semibold rounded-full">JavaScript</span>
+                        </div>
+                        <div class="flex gap-4">
+                            <a href="https://mdhamzakabeer.github.io/saltnpepper/" target="_blank"
+                                class="inline-flex items-center px-4 py-2 bg-blue-600 text-white text-sm font-medium rounded-md hover:bg-blue-700 transition-colors duration-300">Live
+                                Demo <i class="fas fa-external-link-alt ml-2"></i></a>
+                            <a href="https://github.com/mdhamzakabeer/saltnpepper"
+                                class="inline-flex items-center px-4 py-2 bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-white text-sm font-medium rounded-md hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors duration-300">Source
+                                Code <i class="fab fa-github ml-2"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card animate-slideIn" style="animation-delay: 0.3s;">
+                    <div class="inner">
+                        <div class="mb-4">
+                            <img src="assets/images/Untitled design (35).png" alt="Hackathon Platform Screenshot"
+                                class="w-full h-48 object-cover rounded-lg">
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-800 dark:text-white mb-3">Hackathon Platform</h3>
+                        <p class="text-sm text-gray-600 dark:text-gray-300 mb-4">A dynamic hackathon management platform
+                            built with HTML, CSS, and JavaScript. Features event registration, team formation, and
+                            real-time updates for participants, ensuring a seamless hackathon experience.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span
+                                class="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-300 text-xs font-semibold rounded-full">HTML</span>
+                            <span
+                                class="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-300 text-xs font-semibold rounded-full">CSS</span>
+                            <span
+                                class="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-300 text-xs font-semibold rounded-full">JavaScript</span>
+                        </div>
+                        <div class="flex gap-4">
+                            <a href="https://mdhamzakabeer.github.io/hackathonsmit/" target="_blank"
+                                class="inline-flex items-center px-4 py-2 bg-blue-600 text-white text-sm font-medium rounded-md hover:bg-blue-700 transition-colors duration-300">Live
+                                Demo <i class="fas fa-external-link-alt ml-2"></i></a>
+                            <a href="https://github.com/mdhamzakabeer/hackathonsmit"
+                                class="inline-flex items-center px-4 py-2 bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-white text-sm font-medium rounded-md hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors duration-300">Source
+                                Code <i class="fab fa-github ml-2"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="contact" class="scroll-mt-24 py-16 px-4 max-w-5xl mx-auto text-center">
+        <div class="flex justify-center space-x-6 mt-8">
+            <a href="mailto:your.email@example.com"
+                class="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-600 transition text-2xl sm:text-3xl"
+                aria-label="Email Hamza"><i class="fas fa-envelope-square"></i></a>
+            <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer"
+                class="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-600 transition text-2xl sm:text-3xl"
+                aria-label="Hamza's LinkedIn Profile"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/yourprofile" target="_blank" rel="noopener noreferrer"
+                class="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-600 transition text-2xl sm:text-3xl"
+                aria-label="Hamza's GitHub Profile"><i class="fab fa-github-square"></i></a>
+            <a href="https://twitter.com/yourprofile" target="_blank" rel="noopener noreferrer"
+                class="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-600 transition text-2xl sm:text-3xl"
+                aria-label="Hamza's Twitter Profile"><i class="fab fa-twitter-square"></i></a>
+        </div>
+    </section>
+    <footer class="py-8 text-center text-gray-600 dark:text-gray-400 text-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <p>© 2025 Hamza. All rights reserved.</p>
+            <p class="mt-2">Designed and Developed by Hamza</p>
+        </div>
+    </footer>
+    <a href="#projects" class="back-to-top" id="back-to-top"><i class="fas fa-arrow-up"></i></a>
+
+      <link rel="preload" href="js/project.js" as="script">
+    <script src="js/project.js"></script>
+
+</body>
+
+</html>

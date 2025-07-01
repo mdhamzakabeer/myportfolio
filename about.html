@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+   <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="Learn more about Muhammad Hamza Kabeer — a passionate Frontend Developer and Associate Engineer focused on building responsive and high-performing websites." />
+<meta name="keywords" content="About Hamza, Frontend Developer Bio, Associate Engineer, Developer Profile, HTML CSS JavaScript, Tailwind Developer, Pakistan Developer" />
+<meta name="author" content="Muhammad Hamza Kabeer" />
+<meta name="robots" content="index, follow" />
+<meta property="og:title" content="About | Hamza - Frontend Developer" />
+<meta property="og:description" content="A short biography of Hamza's professional journey, skills, and passion for frontend development." />
+<link rel="icon" href="assets/images/muhammadhamzakabeer.png" type="image/png" />
+<title>Muhammad Hamza Kabeer | Frontend Developer Portfolio</title>
+    <link rel="preload" href="css/about.css" as="style" onload="this.rel='stylesheet'">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+        as="style" onload="this.rel='stylesheet'">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        as="style" onload="this.rel='stylesheet'">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+        as="style" onload="this.rel='stylesheet'">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+      <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    screens: {
+                        'xs': '475px',
+                    },
+                    keyframes: {
+                        slideIn: {
+                            '0%': { transform: 'translateY(20px)', opacity: '0' },
+                            '100%': { transform: 'translateY(0)', opacity: '1' },
+                        },
+                        progress: {
+                            '0%': { width: '0%' },
+                            '100%': { width: '100%' },
+                        },
+                        timelineSlideLeft: {
+                            '0%': { transform: 'translateX(-50px)', opacity: '0' },
+                            '100%': { transform: 'translateX(0)', opacity: '1' },
+                        },
+                        timelineSlideRight: {
+                            '0%': { transform: 'translateX(50px)', opacity: '0' },
+                            '100%': { transform: 'translateX(0)', opacity: '1' },
+                        },
+                        scalePulse: {
+                            '0%': { transform: 'scale(1)' },
+                            '50%': { transform: 'scale(1.1)' },
+                            '100%': { transform: 'scale(1)' },
+                        },
+                        glow: {
+                            '0%, 100%': { boxShadow: '0 0 5px rgba(59, 130, 246, 0.5)' },
+                            '50%': { boxShadow: '0 0 20px rgba(59, 130, 246, 0.8)' },
+                        },
+                    },
+                    animation: {
+                        slideIn: 'slideIn 0.5s ease-out',
+                        progress: 'progress 0.5s ease-out',
+                        timelineSlideLeft: 'timelineSlideLeft 0.6s ease-out forwards',
+                        timelineSlideRight: 'timelineSlideRight 0.6s ease-out forwards',
+                        scalePulse: 'scalePulse 0.4s ease-in-out',
+                        glow: 'glow 2s ease-in-out infinite',
+                    },
+                }
+            }
+        };
+    </script>
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/sweetalert2@11" as="script">
+
+</head>
+
+<body class="text-gray-800 dark:text-white font-sans scroll-smooth">
+    <div class="fixed-bg"></div>
+    <div class="scroll-progress">
+        <div class="scroll-progress-bar"></div>
+    </div>
+    <header id="desktop-header" class="fixed top-0 left-0 w-full h-20 z-50 hidden lg:block transition-all duration-300">
+        <div class="max-w-[1280px] mx-auto flex justify-between items-center px-4 sm:px-6 lg:px-8 h-full">
+            <a href='index.html'>
+                <h1 class="signature text-3xl font-bold text-blue-600 flex items-center">M.Hamza kabeer</h1>
+            </a>
+            <nav class="flex justify-center space-x-6 items-center">
+                <a class='desktop-nav-item active' href="index.html"><i
+                        class="fa-sharp fa-solid fa-house"></i><span>Home</span></a>
+                <a class='desktop-nav-item' href='#about'><i
+                        class="fa-sharp fa-solid fa-user"></i><span>About</span></a>
+                <a class='desktop-nav-item' href='about.html#skills'><i
+                        class="fa-sharp fa-solid fa-graduation-cap"></i><span>Skills</span></a>
+                <a class='desktop-nav-item' href="project.html"><i
+                        class="fa-sharp fa-solid fa-diagram-project"></i><span>Projects</span></a>
+                <a href="#testimonials" class="desktop-nav-item"><i
+                        class="fa-sharp fa-solid fa-star"></i><span>Testimonials</span></a>
+                <a href="#services" class="desktop-nav-item"><i
+                        class="fa-sharp fa-solid fa-wrench"></i><span>Services</span></a>
+                <a class='desktop-nav-item' href="contact.html"><i
+                        class="bi-chat-square-text"></i><span>Contact</span></a>
+                <button id="theme-toggle-desktop"
+                    class="text-xl text-gray-800 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-600 transition-colors duration-300 p-2 rounded"
+                    aria-label="Toggle dark mode">
+                    <i id="theme-icon-desktop" class="fas fa-moon"></i>
+                </button>
+            </nav>
+        </div>
+    </header>
+    <header id="mobile-top-header"
+        class="fixed top-0 left-0 w-full min-h-16 z-[60] flex justify-between items-center px-4 lg:hidden transition-all duration-300">
+        <a href='index.html'>
+            <h1 class="signature font-bold text-4xl text-blue-600 flex items-center">Hamza</h1>
+        </a>
+        <div class="flex items-center space-x-4">
+            <button id="theme-toggle-mobile"
+                class="text-xl text-gray-800 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-600 transition-colors duration-300 p-2 rounded"
+                aria-label="Toggle dark mode">
+                <i id="theme-icon-mobile" class="fas fa-moon"></i>
+            </button>
+            <button id="menu-toggle" class="flex flex-col justify-center items-center w-8 h-8 space-y-1.5 z-[70] p-1">
+                <span class="block"></span>
+                <span class="block"></span>
+                <span class="block"></span>
+            </button>
+        </div>
+    </header>
+    <div id="mobile-menu"
+        class="lg:hidden fixed inset-0 flex flex-col justify-center items-center bg-white dark:bg-gray-900 space-y-8 text-xl font-semibold text-gray-800 dark:text-white opacity-0 scale-95 pointer-events-none transform transition-all duration-300 z-40">
+        <a class='hover:text-blue-600 transition' href="index.html">Home</a>
+        <a class='hover:text-blue-600 transition' href='about.html'>About</a>
+        <a href="about.html#skills" class="hover:text-blue-600 transition">Skills</a>
+        <a class='hover:text-blue-600 transition' href="project.html">Projects</a>
+        <a href="#testimonials" class="hover:text-blue-600 transition">Testimonials</a>
+        <a href="#services" class="hover:text-blue-600 transition">Services</a>
+        <a class='hover:text-blue-600 transition' href="contact.html">Contact</a>
+    </div>
+    <nav id="mobile-bottom-nav"
+        class="fixed bottom-0 left-0 w-full h-16 z-50 flex justify-around items-center px-4 lg:hidden transition-all duration-300">
+        <a class='nav-link-icon active' href="index.html"><i class="fas fa-home"></i><span>Home</span></a>
+        <a class='nav-link-icon' href='#about'><i class="fas fa-user"></i><span>About</span></a>
+        <a href="#skills" class="nav-link-icon"><i class="fas fa-graduation-cap"></i><span>Skills</span></a>
+        <a class='nav-link-icon' href="project.html"><i class="fas fa-laptop-code"></i><span>Projects</span></a>
+        <a class='nav-link-icon' href="contact.html"><i class="bi-chat-square-text"></i><span>Contact</span></a>
+    </nav>
+    <div id="project-modal" class="modal">
+        <div class="modal-content bg-white dark:bg-gray-800">
+            <span class="modal-close">×</span>
+            <img id="modal-image" src="" alt="Project screenshot"
+                class="w-full h-48 sm:h-64 object-cover rounded-md mb-4">
+            <h3 id="modal-title" class="text-xl sm:text-2xl font-semibold mb-2"></h3>
+            <p id="modal-description" class="text-sm sm:text-base text-gray-600 dark:text-gray-300 mb-4"></p>
+            <div id="modal-links" class="flex gap-4 justify-center"></div>
+        </div>
+    </div>
+    <!-- About Section -->
+    <section id="about" class="scroll-mt-24 pt-32 pb-16 px-4 sm:px-6">
+        <div class="max-w-5xl mx-auto">
+            <!-- Hero Introduction -->
+            <div class="flex flex-col md:flex-row items-center gap-8 mb-12">
+                <div class="flex justify-center items-center order-1 md:order-none">
+                    <picture>
+                        <source srcset="assets/images/profile.webp" type="image/webp">
+                        <img src="assets/images/profile.webp" alt="Hamza's profile picture"
+                            class="profile-pic w-48 h-48 sm:w-64 sm:h-64 md:w-80 md:h-80 object-cover object-top rounded-full border-4 border-blue-600"
+                            fetchpriority="high">
+                    </picture>
+                </div>
+                <div class="flex-1 text-center md:text-left">
+                    <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 text-blue-600 animate-slideIn">Hi, I’m
+                        Hamza</h2>
+                    <p class="text-sm sm:text-base md:text-lg text-gray-600 dark:text-gray-300 mb-6 animate-slideIn">
+                        A passionate Frontend Developer and Associate Engineer with expertise in creating responsive,
+                        user-friendly web applications. I specialize in HTML, CSS, JavaScript, React, and Tailwind CSS,
+                        delivering modern digital solutions that drive impact.
+                    </p>
+                    <div class="flex justify-center md:justify-start space-x-4 animate-slideIn">
+                        <a href="#services"
+                            class="bg-blue-600 text-white px-4 sm:px-6 py-2 sm:py-3 rounded-lg font-medium hover:bg-blue-700 transition text-sm sm:text-base">Explore
+                            My Services</a>
+                        <a href="path/to/cv.pdf" download
+                            class="border border-blue-600 text-blue-600 dark:text-blue-400 px-4 sm:px-6 py-2 sm:py-3 rounded-lg font-medium hover:bg-blue-600 hover:text-white dark:hover:bg-blue-600 dark:hover:text-white transition text-sm sm:text-base">Download
+                            CV</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Journey Timeline -->
+            <div class="mb-12">
+                <h3 class="text-2xl sm:text-3xl font-bold mb-8 text-center text-blue-600">My Journey</h3>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <div class="timeline-date">October 2024</div>
+                            <h3 class="timeline-title">Started Saylani Mass IT Training</h3>
+                            <p class="timeline-description">Began my journey with Saylani Mass IT, enrolled in the
+                                Modern Web Application (Frontend) course, learning HTML, CSS, and JavaScript
+                                fundamentals.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <div class="timeline-date">November 2024</div>
+                            <h3 class="timeline-title">Mastered HTML & CSS</h3>
+                            <p class="timeline-description">Developed strong skills in HTML and CSS, creating responsive
+                                static webpages through hands-on projects at Saylani.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <div class="timeline-date">December 2024</div>
+                            <h3 class="timeline-title">Learned JavaScript Basics</h3>
+                            <p class="timeline-description">Gained proficiency in JavaScript, adding interactivity to
+                                web projects as part of the Saylani course curriculum.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <div class="timeline-date">January 2025</div>
+                            <h3 class="timeline-title">Started Learning React</h3>
+                            <p class="timeline-description">Began exploring React in the Saylani course to build dynamic
+                                and modern web applications.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <div class="timeline-date">February 2025</div>
+                            <h3 class="timeline-title">Adopted Tailwind CSS</h3>
+                            <p class="timeline-description">Started using Tailwind CSS for efficient and responsive
+                                styling in frontend projects at Saylani.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <div class="timeline-date">March 2025</div>
+                            <h3 class="timeline-title">Built First Major Project</h3>
+                            <p class="timeline-description">Completed a full-fledged frontend project using HTML, CSS,
+                                JavaScript, React, and Tailwind CSS as part of Saylani's training.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <div class="timeline-date">June 2025</div>
+                            <h3 class="timeline-title">Continuing Saylani Journey</h3>
+                            <p class="timeline-description">Currently advancing my skills in modern web development,
+                                preparing for real-world frontend projects through Saylani's training program.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Skills Highlight -->
+            <div id="skills" class="mb-12">
+                <h3 class="text-2xl sm:text-3xl font-bold mb-8 text-center text-blue-600">My Top Skills</h3>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div class="skill-item">
+                        <span class="skill-label">HTML</span>
+                        <div class="skill-bar">
+                            <div class="skill-bar-fill w-[90%]"></div>
+                        </div>
+                        <span class="skill-percentage">90%</span>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-label">CSS</span>
+                        <div class="skill-bar">
+                            <div class="skill-bar-fill w-[85%]"></div>
+                        </div>
+                        <span class="skill-percentage">85%</span>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-label">JavaScript</span>
+                        <div class="skill-bar">
+                            <div class="skill-bar-fill w-[80%]"></div>
+                        </div>
+                        <span class="skill-percentage">80%</span>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-label">Firebase</span>
+                        <div class="skill-bar">
+                            <div class="skill-bar-fill w-[60%]"></div>
+                        </div>
+                        <span class="skill-percentage">60%</span>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-label">Tailwind CSS</span>
+                        <div class="skill-bar">
+                            <div class="skill-bar-fill w-[75%]"></div>
+                        </div>
+                        <span class="skill-percentage">75%</span>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-label">UI/UX Design</span>
+                        <div class="skill-bar">
+                            <div class="skill-bar-fill w-[70%]"></div>
+                        </div>
+                        <span class="skill-percentage">70%</span>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-label">React</span>
+                        <div class="skill-bar">
+                            <div class="skill-bar-fill w-[50%]"></div>
+                        </div>
+                        <span class="skill-percentage">50%</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Services Hero Section -->
+    <section id="services-hero"
+        class="scroll-mt-24 min-h-[50vh] flex flex-col items-center justify-center pt-20 px-4 sm:px-6 max-w-[1280px] mx-auto">
+        <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 text-center text-blue-600">My Services</h1>
+        <p class="text-sm sm:text-base md:text-lg text-gray-600 dark:text-gray-300 mb-8 max-w-2xl text-center">
+            I offer a range of web development and design services to help you build modern, responsive, and
+            user-friendly digital solutions. Let’s bring your ideas to life!
+        </p>
+        <a class='bg-blue-600 text-white px-4 sm:px-6 py-2 sm:py-3 rounded-lg font-medium hover:bg-blue-700 transition text-sm sm:text-base'
+            href="#">Get
+            in Touch</a>
+    </section>
+    <!-- Services Section -->
+    <section id="services" class="py-16 px-4 sm:px-6">
+        <div class="max-w-5xl mx-auto">
+            <h2 class="text-3xl sm:text-4xl font-bold mb-12 text-center text-blue-600">What I Offer</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
+                <div class="service-card p-4 sm:p-6 text-center">
+                    <i class="fas fa-code text-3xl sm:text-4xl text-blue-600 mb-4"></i>
+                    <h3 class="text-lg sm:text-xl font-semibold mb-2 text-gray-900 dark:text-white">Frontend Development
+                    </h3>
+                    <p class="text-sm sm:text-base text-gray-600 dark:text-gray-300">
+                        Building responsive and interactive web applications using HTML, CSS, JavaScript, and frameworks
+                        like React and Tailwind CSS.
+                    </p>
+                </div>
+                <div class="service-card p-4 sm:p-6 text-center">
+                    <i class="fas fa-paint-brush text-3xl sm:text-4xl text-blue-600 mb-4"></i>
+                    <h3 class="text-lg sm:text-xl font-semibold mb-2 text-gray-900 dark:text-white">UI/UX Design</h3>
+                    <p class="text-sm sm:text-base text-gray-600 dark:text-gray-300">
+                        Creating user-friendly interfaces and high-fidelity prototypes with Figma, focusing on seamless
+                        user experiences.
+                    </p>
+                </div>
+                <div class="service-card p-4 sm:p-6 text-center">
+                    <i class="fas fa-mobile-alt text-3xl sm:text-4xl text-blue-600 mb-4"></i>
+                    <h3 class="text-lg sm:text-xl font-semibold mb-2 text-gray-900 dark:text-white">Responsive Design
+                    </h3>
+                    <p class="text-sm sm:text-base text-gray-600 dark:text-gray-300">
+                        Ensuring your website looks and works perfectly across all devices, from mobile phones to
+                        desktops.
+                    </p>
+                </div>
+                <div class="service-card p-4 sm:p-6 text-center">
+                    <i class="fas fa-server text-3xl sm:text-4xl text-blue-600 mb-4"></i>
+                    <h3 class="text-lg sm:text-xl font-semibold mb-2 text-gray-900 dark:text-white">Backend Integration
+                    </h3>
+                    <p class="text-sm sm:text-base text-gray-600 dark:text-gray-300">
+                        Connecting frontend applications with backend services like Firebase for real-time data and
+                        functionality.
+                    </p>
+                </div>
+                <div class="service-card p-4 sm:p-6 text-center">
+                    <i class="fas fa-rocket text-3xl sm:text-4xl text-blue-600 mb-4"></i>
+                    <h3 class="text-lg sm:text-xl font-semibold mb-2 text-gray-900 dark:text-white">Performance
+                        Optimization</h3>
+                    <p class="text-sm sm:text-base text-gray-600 dark:text-gray-300">
+                        Enhancing website speed and performance through code optimization and best practices.
+                    </p>
+                </div>
+                <div class="service-card p-4 sm:p-6 text-center">
+                    <i class="fas fa-shield-alt text-3xl sm:text-4xl text-blue-600 mb-4"></i>
+                    <h3 class="text-lg sm:text-xl font-semibold mb-2 text-gray-900 dark:text-white">Website Maintenance
+                    </h3>
+                    <p class="text-sm sm:text-base text-gray-600 dark:text-gray-300">
+                        Providing ongoing support and updates to keep your website secure, functional, and up-to-date.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-16 px-4 sm:px-6 scroll-mt-24">
+        <div class="max-w-6xl mx-auto text-center">
+            <h2 class="text-4xl sm:text-5xl font-bold mb-12 text-blue-600 animate-slideIn">What People Say</h2>
+            <!-- Auth Status -->
+            <div id="auth-status" class="mb-8"></div>
+            <!-- Form for submitting testimonials -->
+            <div id="testimonial-form-container" class="mb-16 p-8 max-w-lg mx-auto">
+                <h3 class="text-2xl font-semibold mb-6 text-gray-900 dark:text-white">Share Your Feedback</h3>
+                <form id="testimonial-form" class="space-y-6">
+                    <div>
+                        <input type="text" id="name" placeholder="Your Name (3-15 characters)"
+                            class="w-full p-4 rounded-lg border border-gray-300 dark:border-gray-600 bg-transparent text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-600 transition-all"
+                            readonly>
+                    </div>
+                    <div>
+                        <input type="text" id="title" placeholder="Your Title/Company (3-25 characters)"
+                            class="w-full p-4 rounded-lg border border-gray-300 dark:border-gray-600 bg-transparent text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-600 transition-all">
+                    </div>
+                    <div>
+                        <textarea id="review" placeholder="Your Review (exactly 30 words)" rows="5"
+                            class="w-full p-4 rounded-lg border border-gray-300 dark:border-gray-600 bg-transparent text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-600 transition-all"></textarea>
+                    </div>
+                    <div class="flex justify-center space-x-3 rating-container">
+                        <label class="flex items-center cursor-pointer">
+                            <input type="radio" name="rating" value="1" class="hidden rating-star">
+                            <i
+                                class="fas fa-star text-gray-300 dark:text-gray-600 text-xl transition-transform transform"></i>
+                        </label>
+                        <label class="flex items-center cursor-pointer">
+                            <input type="radio" name="rating" value="2" class="hidden rating-star">
+                            <i
+                                class="fas fa-star text-gray-300 dark:text-gray-600 text-xl transition-transform transform"></i>
+                        </label>
+                        <label class="flex items-center cursor-pointer">
+                            <input type="radio" name="rating" value="3" class="hidden rating-star">
+                            <i
+                                class="fas fa-star text-gray-300 dark:text-gray-600 text-xl transition-transform transform"></i>
+                        </label>
+                        <label class="flex items-center cursor-pointer">
+                            <input type="radio" name="rating" value="4" class="hidden rating-star">
+                            <i
+                                class="fas fa-star text-gray-300 dark:text-gray-600 text-xl transition-transform transform"></i>
+                        </label>
+                        <label class="flex items-center cursor-pointer">
+                            <input type="radio" name="rating" value="5" class="hidden rating-star">
+                            <i
+                                class="fas fa-star text-gray-300 dark:text-gray-600 text-xl transition-transform transform"></i>
+                        </label>
+                    </div>
+                    <button type="submit"
+                        class="bg-blue-600 text-white px-8 py-3 rounded-lg font-medium hover:bg-blue-700 transition w-full animate-glow">Submit
+                        Review</button>
+                </form>
+            </div>
+            <!-- Dynamic testimonials container -->
+            <div id="testimonials-container"
+                class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 mx-4 sm:mx-6"></div>
+        </div>
+    </section>
+
+    <section id="contacts" class="scroll-mt-24 py-16 px-4 max-w-5xl mx-auto text-center">
+        <div class="flex justify-center space-x-6 mt-8">
+            <a href="mailto:your.email@example.com"
+                class="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-600 transition text-2xl sm:text-3xl"
+                aria-label="Email Hamza"><i class="fas fa-envelope-square"></i></a>
+            <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer"
+                class="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-600 transition text-2xl sm:text-3xl"
+                aria-label="Hamza's LinkedIn Profile"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/yourprofile" target="_blank" rel="noopener noreferrer"
+                class="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-600 transition text-2xl sm:text-3xl"
+                aria-label="Hamza's GitHub Profile"><i class="fab fa-github-square"></i></a>
+            <a href="https://twitter.com/yourprofile" target="_blank" rel="noopener noreferrer"
+                class="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-600 transition text-2xl sm:text-3xl"
+                aria-label="Hamza's Twitter Profile"><i class="fab fa-twitter-square"></i></a>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer class="py-8 text-center text-gray-600 dark:text-gray-400 text-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <p>© 2025 Hamza. All rights reserved.</p>
+            <p class="mt-2">Designed and Developed by Hamza</p>
+        </div>
+    </footer>
+    <!-- Back to Top -->
+    <a href="#about" class="back-to-top" id="back-to-top"><i class="fas fa-arrow-up"></i></a>
+
+ <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="preload" href="js/main.js" as="script">
+    <script type="module" src="js/main.js"></script>
+
+
+</body>
+
+</html>

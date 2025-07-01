@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description"
+        content="Muhammad Hamza Kabeer — Frontend Developer and Associate Engineer. Explore my professional portfolio, development skills, and featured projects." />
+    <meta name="keywords"
+        content="Muhammad Hamza Kabeer, Frontend Developer, Web Developer, Portfolio, JavaScript, Tailwind CSS, Firebase, GSAP, HTML5, CSS3, Projects" />
+    <meta name="author" content="Muhammad Hamza Kabeer" />
+    <meta name="robots" content="index, follow" />
+    <meta property="og:title" content="Hamza | Frontend Developer Portfolio" />
+    <meta property="og:description"
+        content="Showcasing professional web development skills, live projects, and animations using modern technologies like Firebase, GSAP, and Tailwind CSS." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="#" />
+    <link rel="icon" href="assets/images/muhammadhamzakabeer.png" type="image/png" />
+    <meta property="og:image" content="https://yourdomain.com/assets/images/preview.png" />
+    <title>Muhammad Hamza Kabeer | Frontend Developer Portfolio</title>
+    <link rel="preload" href="css/styles.css" as="style" onload="this.rel='stylesheet'">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+        as="style" onload="this.rel='stylesheet'">
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+        as="style" onload="this.rel='stylesheet'">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&display=swap" as="style"
+        onload="this.rel='stylesheet'">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        as="style" onload="this.rel='stylesheet'">
+    <link rel="preload" href="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs"
+        as="script">
+    <link rel="preload" href="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js" as="script">
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/typed.js@2.0.12" as="script">
+    <link rel="preload" href="https://cdn.tailwindcss.com" as="script">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    screens: {
+                        'xs': '475px',
+                    },
+                    keyframes: {
+                        slideIn: {
+                            '0%': { transform: 'translateY(20px)', opacity: '0' },
+                            '100%': { transform: 'translateY(0)', opacity: '1' },
+                        },
+                        progress: {
+                            '0%': { width: '0%' },
+                            '100%': { width: '100%' },
+                        },
+                        fadeIn: {
+                            '0%': { opacity: '0' },
+                            '100%': { opacity: '1' },
+                        },
+                        timelineSlideLeft: {
+                            '0%': { transform: 'translateX(-50px)', opacity: '0' },
+                            '100%': { transform: 'translateX(0)', opacity: '1' },
+                        },
+                        timelineSlideRight: {
+                            '0%': { transform: 'translateX(50px)', opacity: '0' },
+                            '100%': { transform: 'translateX(0)', opacity: '1' },
+                        },
+                        scalePulse: {
+                            '0%': { transform: 'scale(1)' },
+                            '50%': { transform: 'scale(1.1)' },
+                            '100%': { transform: 'scale(1)' },
+                        },
+                    },
+                    animation: {
+                        slideIn: 'slideIn 0.5s ease-out',
+                        progress: 'progress 0.5s ease-out',
+                        fadeIn: 'fadeIn 0.5s ease-out',
+                        timelineSlideLeft: 'timelineSlideLeft 0.6s ease-out forwards',
+                        timelineSlideRight: 'timelineSlideRight 0.6s ease-out forwards',
+                        scalePulse: 'scalePulse 0.4s ease-in-out',
+                    },
+                }
+            }
+        };
+    </script>
+    <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+</head>
+
+<body class="text-gray-800 dark:text-white font-sans scroll-smooth">
+    <div class="fixed-bg"></div>
+    <div class="scroll-progress">
+        <div class="scroll-progress-bar"></div>
+    </div>
+    <header id="desktop-header" class="fixed top-0 left-0 w-full h-20 z-50 hidden lg:block transition-all duration-300">
+        <div class="max-w-[1280px] mx-auto flex justify-between items-center px-4 sm:px-6 lg:px-8 h-full">
+            <div class="signature-container flex items-center">
+                <a href="#">
+                    <h1 class="signature text-3xl font-bold text-blue-600 flex items-center">M.Hamza Kabeer</h1>
+            </div></a>
+            <nav class="flex justify-center space-x-6 items-center">
+                <a href="#home" class="desktop-nav-item"><i class="fa-sharp fa-solid fa-house"></i><span>Home</span></a>
+                <a class='desktop-nav-item' href='about.html'><i
+                        class="fa-sharp fa-solid fa-user"></i><span>About</span></a>
+                <a href="#skills" class="desktop-nav-item"><i
+                        class="fa-sharp fa-solid fa-graduation-cap"></i><span>Skills</span></a>
+                <a class='desktop-nav-item' href='project.html'><i
+                        class="fa-sharp fa-solid fa-diagram-project"></i><span>Projects</span></a>
+                <a class='desktop-nav-item' href='contact.html'><i
+                        class="bi-chat-square-text"></i><span>Contact</span></a>
+                <button id="theme-toggle-desktop"
+                    class="text-xl text-gray-800 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-600 transition-colors duration-300 p-2 rounded"
+                    aria-label="Toggle dark mode">
+                    <i id="theme-icon-desktop" class="fas fa-moon"></i>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <header id="mobile-top-header"
+        class="fixed top-0 left-0 w-full min-h-16 z-[60] flex justify-between items-center px-4 lg:hidden transition-all duration-300">
+        <a href="index.html">
+            <h1 class="signature text-4xl font-bold text-blue-600 flex items-center">Hamza</h1>
+        </a>
+        <div class="flex items-center space-x-4">
+            <button id="theme-toggle-mobile"
+                class="text-xl text-gray-800 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-600 transition-colors duration-300 p-2 rounded"
+                aria-label="Toggle dark mode">
+                <i id="theme-icon-mobile" class="fas fa-moon"></i>
+            </button>
+            <button id="menu-toggle" class="flex flex-col justify-center items-center w-8 h-8 space-y-1.5 z-[70] p-1">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <div id="mobile-menu"
+        class="lg:hidden fixed inset-0 flex flex-col justify-center items-center bg-white dark:bg-gray-900 space-y-8 text-xl font-semibold text-gray-800 dark:text-white opacity-0 scale-95 pointer-events-none transform transition-all duration-300 z-40">
+        <a href="#home" class="hover:text-blue-600 transition">Home</a>
+        <a class='hover:text-blue-600 transition' href='about.html'>About</a>
+        <a href="#skills" class="hover:text-blue-600 transition">Skills</a>
+        <a class='hover:text-blue-600 transition' href='project.html'>Projects</a>
+        <a href="about.html#testimonials" class="hover:text-blue-600 transition">Testimonials</a>
+        <a class='hover:text-blue-600 transition' href='contact.html'>Contact</a>
+    </div>
+
+    <nav id="mobile-bottom-nav"
+        class="fixed bottom-0 left-0 w-full h-16 z-50 flex justify-around items-center px-4 lg:hidden transition-all duration-300">
+        <a href="#home" class="nav-link-icon"><i class="fas fa-home"></i><span>Home</span></a>
+        <a class='nav-link-icon' href='about.html'><i class="fas fa-user"></i><span>About</span></a>
+        <a class='nav-link-icon' href='project.html'><i class="fas fa-laptop-code"></i><span>Projects</span></a>
+        <a class='nav-link-icon' href='contact.html'><i class="bi-chat-square-text"></i><span>Contact</span></a>
+    </nav>
+
+    <section id="home"
+        class="scroll-mt-24 min-h-screen flex flex-col md:flex-row items-center justify-center pt-20 md:pt-32 px-4 sm:px-6 max-w-[1280px] mx-auto gap-4 md:gap-8">
+        <div class="flex-1 text-left pl-4 sm:pl-6 md:pl-8 mt-12 sm:mt-0">
+            <h1 class="text-2xl xs:text-3xl sm:text-4xl md:text-5xl font-bold mb-4 leading-tight">
+                Hi, I'm <span id="typed-name" class="text-blue-600"></span>
+            </h1>
+            <p class="text-sm xs:text-base md:text-lg text-gray-600 dark:text-gray-300 mb-6 max-w-xl">
+                A passionate <strong>Frontend Developer</strong> and <strong>Associate Engineer</strong>, creating
+                modern and responsive web experiences.
+            </p>
+            <div class="flex gap-3 sm:gap-4">
+                <a class='bg-blue-600 text-white px-4 py-2 rounded-lg font-medium hover:bg-blue-700 transition inline-block text-sm sm:text-base'
+                    href='/project#project'>View
+                    Projects</a>
+                <a href="#" id="download-resume"
+                    class="bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-white px-4 py-2 rounded-lg font-medium hover:bg-gray-300 dark:hover:bg-gray-600 transition inline-block text-sm sm:text-base">Download
+                    Resume</a>
+            </div>
+        </div>
+        <div class="flex-1 flex justify-center items-center">
+            <dotlottie-player src="https://lottie.host/f7e0c8f1-323b-46fd-af62-a2ea6411e4cb/BJpJZygdm9.lottie"
+                background="transparent" speed="1"
+                class="dotlottie-player w-full max-w-xs xs:max-w-sm sm:max-w-md md:max-w-lg h-[200px] xs:h-[250px] sm:h-[300px] md:h-[400px] transform translate-x-4 mx-auto"
+                loop autoplay></dotlottie-player>
+        </div>
+    </section>
+    <section id="about" class="scroll-mt-24 py-16 px-4 sm:px-6">
+        <div class="max-w-5xl mx-auto">
+            <h2 class="text-3xl sm:text-4xl font-bold mb-10 text-center text-blue-600">Profile</h2>
+            <div
+                class="profile-container flex flex-col md:flex-row items-center justify-center gap-8 p-6 sm:p-10 rounded-lg">
+                <div class="flex justify-center items-center order-1 md:order-none">
+                    <dotlottie-player src="https://lottie.host/f63b05fc-bf0f-43a1-9440-6247947930da/0c0XBrGzfQ.lottie"
+                        background="transparent" speed="1" style="width: 300px; height: 300px" loop
+                        autoplay></dotlottie-player>
+                </div>
+                <div
+                    class="flex-1 text-sm xs:text-base md:text-lg leading-relaxed text-gray-700 dark:text-gray-200 text-center md:text-left">
+                    <p>I am a dedicated and innovative frontend developer with a passion for crafting seamless,
+                        responsive, and visually stunning web experiences. Proficient in HTML, CSS, JavaScript, and
+                        modern frameworks like React and Vue, I specialize in building dynamic, user-centric
+                        applications that combine functionality with aesthetic appeal. My commitment to clean code,
+                        accessibility, and performance optimization drives me to deliver projects that exceed
+                        expectations and empower user</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="timeline" class="scroll-mt-24 py-16 px-4 sm:px-6">
+        <div class="max-w-5xl mx-auto">
+            <h2 class="text-3xl sm:text-4xl font-bold mb-10 text-center text-blue-600">My Timeline</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-date">2018</div>
+                        <h3 class="timeline-title">Matriculation in Science</h3>
+                        <p class="timeline-description">Completed Matriculation from the Board of Secondary Education,
+                            Karachi, with a focus on Science.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-date">2020</div>
+                        <h3 class="timeline-title">Intermediate in Pre-Engineering</h3>
+                        <p class="timeline-description">Completed Intermediate from the Board of Intermediate Education,
+                            Karachi, specializing in Pre-Engineering.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-date">2021 - 2023</div>
+                        <h3 class="timeline-title">Diploma in Software Engineering</h3>
+                        <p class="timeline-description">Earned a 3-year Diploma in Software Engineering from the Sindh
+                            Board of Technical Education.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-date">2025 - Present</div>
+                        <h3 class="timeline-title">Pursuing Undergraduate Degree</h3>
+                        <p class="timeline-description">Currently applied for an undergraduate program to further
+                            advance my education in Software Engineering.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="py-16 px-4 sm:px-6">
+        <div class="max-w-5xl mx-auto">
+            <h2 class="text-3xl sm:text-4xl font-bold mb-12 text-center text-blue-600">My Expertise</h2>
+            <div class="grid grid-cols-2 xs:grid-cols-3 sm:grid-cols-4 lg:grid-cols-5 gap-4 sm:gap-6">
+                <div class="skill-punch-card p-4 sm:p-6 flex flex-col items-center justify-center">
+                    <i class="fab fa-html5 text-3xl sm:text-4xl text-orange-500"></i>
+                    <span class="mt-2 text-xs sm:text-sm font-medium text-gray-700 dark:text-gray-300">HTML5</span>
+                    <div class="skill-progress">
+                        <div class="skill-progress-bar" style="width: 90%"></div>
+                    </div>
+                </div>
+                <div class="skill-punch-card p-4 sm:p-6 flex flex-col items-center justify-center">
+                    <i class="fab fa-css3-alt text-3xl sm:text-4xl text-blue-500"></i>
+                    <span class="mt-2 text-xs sm:text-sm font-medium text-gray-700 dark:text-gray-300">CSS3</span>
+                    <div class="skill-progress">
+                        <div class="skill-progress-bar" style="width: 85%"></div>
+                    </div>
+                </div>
+                <div class="skill-punch-card p-4 sm:p-6 flex flex-col items-center justify-center">
+                    <svg stroke="currentColor" fill="currentColor" stroke-width="0" version="1.1" viewBox="0 0 32 32"
+                        class="w-8 h-8 sm:w-10 sm:h-10 text-yellow-500" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M9.633 7.968h3.751v10.514c0 4.738-2.271 6.392-5.899 6.392-0.888 0-2.024-0.148-2.764-0.395l0.42-3.036c0.518 0.173 1.185 0.296 1.925 0.296 1.58 0 2.567-0.716 2.567-3.282v-10.489zM16.641 20.753c0.987 0.518 2.567 1.037 4.171 1.037 1.728 0 2.641-0.716 2.641-1.826 0-1.012-0.79-1.629-2.789-2.32-2.764-0.987-4.59-2.517-4.59-4.961 0-2.838 2.394-4.985 6.293-4.985 1.9 0 3.258 0.37 4.245 0.839l-0.839 3.011c-0.642-0.321-1.851-0.79-3.455-0.79-1.629 0-2.419 0.765-2.419 1.604 0 1.061 0.913 1.53 3.085 2.369 2.937 1.086 4.294 2.616 4.294 4.985 0 2.789-2.122 5.158-6.688 5.158-1.9 0-3.776-0.518-4.714-1.037l0.765-3.085z">
+                        </path>
+                    </svg>
+                    <span class="mt-2 text-xs sm:text-sm font-medium text-gray-700 dark:text-gray-300">JavaScript</span>
+                    <div class="skill-progress">
+                        <div class="skill-progress-bar" style="width: 80%"></div>
+                    </div>
+                </div>
+                <div class="skill-punch-card p-4 sm:p-6 flex flex-col items-center justify-center">
+                    <svg stroke="currentColor" fill="currentColor" stroke-width="0" role="img" viewBox="0 0 24 24"
+                        class="w-8 h-8 sm:w-10 sm:h-10 text-teal-500" xmlns="http://www.w3.org/2000/svg">
+                        <title>Tailwind CSS</title>
+                        <path
+                            d="M12.001,4.8c-3.2,0-5.2,1.6-6,4.8c1.2-1.6,2.6-2.2,4.2-1.8c0.913,0.228,1.565,0.89,2.288,1.624 C13.666,10.618,15.027,12,18.001,12c3.2,0,5.2-1.6,6-4.8c-1.2,1.6-2.6,2.2-4.2,1.8c-0.913-0.228-1.565-0.89-2.288-1.624 C16.337,6.182,14.976,4.8,12.001,4.8z M6.001,12c-3.2,0-5.2,1.6-6,4.8c1.2-1.6,2.6-2.2,4.2-1.8c0.913,0.228,1.565,0.89,2.288,1.624 c1.177,1.194,2.538,2.576,5.512,2.576c3.2,0,5.2-1.6,6-4.8c-1.2,1.6-2.6,2.2-4.2,1.8c-0.913-0.228-1.565-0.89-2.288-1.624 C10.337,13.382,8.976,12,6.001,12z">
+                        </path>
+                    </svg>
+                    <span class="mt-2 text-xs sm:text-sm font-medium text-gray-700 dark:text-gray-300">Tailwind
+                        CSS</span>
+                    <div class="skill-progress">
+                        <div class="skill-progress-bar" style="width: 75%"></div>
+                    </div>
+                </div>
+                <div class="skill-punch-card p-4 sm:p-6 flex flex-col items-center justify-center">
+                    <i class="fab fa-bootstrap text-3xl sm:text-4xl text-purple-600"></i>
+                    <span class="mt-2 text-xs sm:text-sm font-medium text-gray-700 dark:text-gray-300">Bootstrap</span>
+                    <div class="skill-progress">
+                        <div class="skill-progress-bar" style="width: 70%"></div>
+                    </div>
+                </div>
+                <div class="skill-punch-card p-4 sm:p-6 flex flex-col items-center justify-center">
+                    <i class="fab fa-react text-3xl sm:text-4xl text-sky-400"></i>
+                    <span class="mt-2 text-xs sm:text-sm font-medium text-gray-700 dark:text-gray-300">React</span>
+                    <div class="skill-progress">
+                        <div class="skill-progress-bar" style="width: 80%"></div>
+                    </div>
+                </div>
+                <div class="skill-punch-card p-4 sm:p-6 flex flex-col items-center justify-center">
+                    <i class="fab fa-git-alt text-3xl sm:text-4xl text-red-600"></i>
+                    <span class="mt-2 text-xs sm:text-sm font-medium text-gray-700 dark:text-gray-300">Git</span>
+                    <div class="skill-progress">
+                        <div class="skill-progress-bar" style="width: 85%"></div>
+                    </div>
+                </div>
+                <div class="skill-punch-card p-4 sm:p-6 flex flex-col items-center justify-center">
+                    <svg stroke="currentColor" fill="currentColor" stroke-width="0" role="img" viewBox="0 0 24 24"
+                        class="w-8 h-8 sm:w-10 sm:h-10 text-red-500" xmlns="http://www.w3.org/2000/svg">
+                        <title>Firebase</title>
+                        <path
+                            d="M3.89 15.672L6.255.461A.542.542 0 017.27.288l2.543 4.771zm16.794 3.692l-2.25-14a.54.54 0 00-.919-.295L3.316 19.365l7.856 4.427a1.621 1.621 0 001.588 0zM14.3 7.147l-1.82-3.482a.542.542 0 00-.96 0L3.53 17.984z">
+                        </path>
+                    </svg>
+                    <span class="mt-2 text-xs sm:text-sm font-medium text-gray-700 dark:text-gray-300">Firebase</span>
+                    <div class="skill-progress">
+                        <div class="skill-progress-bar" style="width: 65%"></div>
+                    </div>
+                </div>
+                <div class="skill-punch-card p-4 sm:p-6 flex flex-col items-center justify-center">
+                    <i class="fab fa-figma text-3xl sm:text-4xl text-purple-600"></i>
+                    <span class="mt-2 text-xs sm:text-sm font-medium text-gray-700 dark:text-gray-300">Figma</span>
+                    <div class="skill-progress">
+                        <div class="skill-progress-bar" style="width: 70%"></div>
+                    </div>
+                </div>
+                <div class="skill-punch-card p-4 sm:p-6 flex flex-col items-center justify-center">
+                    <svg viewBox="0 0 283 250" fill="currentColor" xmlns="http://www.w3.org/2000/svg"
+                        class="h-8 w-8 sm:h-10 sm:w-10 text-gray-800 dark:text-white">
+                        <path d="M141.6 0L0 250h283.2L141.6 0z" />
+                    </svg>
+                    <span class="mt-2 text-xs sm:text-sm font-medium text-gray-700 dark:text-gray-300">Vercel</span>
+                    <div class="skill-progress">
+                        <div class="skill-progress-bar" style="width: 60%"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="scroll-mt-24 py-16 px-4 max-w-5xl mx-auto text-center">
+        <div class="flex justify-center space-x-6 mt-8">
+            <a href="mailto:your.email@example.com"
+                class="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-600 transition text-2xl sm:text-3xl"
+                aria-label="Email Hamza"><i class="fas fa-envelope-square"></i></a>
+            <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer"
+                class="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-600 transition text-2xl sm:text-3xl"
+                aria-label="Hamza's LinkedIn Profile"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/yourprofile" target="_blank" rel="noopener noreferrer"
+                class="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-600 transition text-2xl sm:text-3xl"
+                aria-label="Hamza's GitHub Profile"><i class="fab fa-github-square"></i></a>
+            <a href="https://twitter.com/yourprofile" target="_blank" rel="noopener noreferrer"
+                class="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-600 transition text-2xl sm:text-3xl"
+                aria-label="Hamza's Twitter Profile"><i class="fab fa-twitter-square"></i></a>
+        </div>
+    </section>
+
+    <footer class="py-8 text-center text-gray-600 dark:text-gray-400 text-sm ">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <p>© 2025 Hamza. All rights reserved.</p>
+            <p class="mt-2">Designed and Developed by Hamza</p>
+        </div>
+    </footer>
+
+    <a href="#home" class="back-to-top" id="back-to-top"><i class="fas fa-arrow-up"></i></a>
+
+    <div id="project-modal" class="modal">
+        <div class="modal-content bg-white dark:bg-gray-800">
+            <span class="modal-close">×</span>
+            <img id="modal-image" src="" alt="Project screenshot"
+                class="w-full h-48 sm:h-64 object-cover rounded-md mb-4">
+            <h3 id="modal-title" class="text-xl sm:text-2xl font-semibold mb-2"></h3>
+            <p id="modal-description" class="text-sm sm:text-base text-gray-600 dark:text-gray-300 mb-4"></p>
+            <div id="modal-links" class="flex gap-4 justify-center"></div>
+        </div>
+    </div>
+    <link rel="preload" href="js/script.js" as="script">
+    <script src="js/script.js"></script>
+</body>
+
+</html>
