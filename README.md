@@ -2,7 +2,7 @@
 
 This is my **personal portfolio website**, designed and developed by me from scratch. It showcases my frontend development skills, professional experience, and selected projects. Built with performance, animations, and responsiveness in mind.
 
-🌐 **Live Demo**: [Click here]()
+🌐 **Live Demo**: [Click here](https://mdhamzakabeer.github.io/myportfolio/)
 
 ---
 
@@ -69,7 +69,7 @@ If you want to use or adapt this portfolio for your own project, please contact 
 ## 📬 Contact
 
 - 📧 Email: hamzakabeer021@gmail.com
-- 🌐 Website: []()
+- 🌐 Website: [https://mdhamzakabeer.github.io/myportfolio/](https://mdhamzakabeer.github.io/myportfolio/)
 - 🔗 Facebook: [facebook.com/muhammad.hamza.kabeer](https://www.facebook.com/muhammad.hamza.kabeer)
 - 🔗 LinkedIn: [linkedin.com/in/muhammad-hamza-kabeer](https://www.linkedin.com/in/muhammad-hamza-kabeer/)
 - 🔗 GitHub: [github.com/mdhamzakabeer](https://github.com/mdhamzakabeer)
