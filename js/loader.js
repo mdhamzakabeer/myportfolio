@@ -1,18 +1,21 @@
-export function initLoader() {
-  window.addEventListener('load', () => {
-    const loaderWrapper = document.querySelector('.loader-wrapper');
-    if (loaderWrapper) {
-      // 👇 First show loader and make content visible
-      document.body.style.visibility = 'visible';
-      document.body.style.overflow = 'auto';
+'use strict';
 
-      // 👇 Now fade loader out smoothly
-      setTimeout(() => {
-        loaderWrapper.classList.add('hidden');
-        setTimeout(() => {
-          loaderWrapper.style.display = 'none';
-        }, 500); // Match transition time
-      }, 1000); // Show loader for 0.5s minimum
-    }
-  });
+export function initLoader() {
+    window.addEventListener('load', () => {
+        const loaderWrapper = document.querySelector('.loader-wrapper');
+        if (loaderWrapper) {
+            // 👇 Show the page (scroll + visibility)
+            document.documentElement.style.visibility = 'visible';
+            document.body.style.visibility = 'visible';
+            document.body.style.overflow = 'auto'; // ✅ scroll allow again
+
+            // 👇 Fade out the loader
+            setTimeout(() => {
+                loaderWrapper.classList.add('hidden');
+                setTimeout(() => {
+                    loaderWrapper.style.display = 'none';
+                }, 500); // matches CSS transition
+            }, 1000); // at least show loader for 0.5s
+        }
+    });
 }
