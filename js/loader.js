@@ -8,8 +8,12 @@ export function initLoader() {
                 loaderWrapper.classList.add('hidden');
                 setTimeout(() => {
                     loaderWrapper.style.display = 'none';
-                }, 500); // Matches CSS transition duration
-            }, 1000); // 2-second delay before hiding loader
+
+                    // 🔥 Reveal the page after loader
+                    document.body.style.visibility = 'visible';
+                    document.body.style.overflow = 'auto';
+                }, 500); // Match CSS transition duration
+            }, 1000); // Optional delay for branding feel
         }
     });
 }
