@@ -131,10 +131,10 @@
   // Resume download
   function handleResumeDownload(event) {
     event.preventDefault();
-    const resumeUrl = '/images/resume.pdf';
+    const resumeUrl = 'assets/images/resume.pdf';
     const link = document.createElement('a');
     link.href = resumeUrl;
-    link.download = 'Hamza_Resume.pdf';
+    link.download = 'MuhammadHamzakabeer-Resume.pdf';
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
