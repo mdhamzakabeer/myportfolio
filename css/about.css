@@ -1091,36 +1091,33 @@
 ::-webkit-scrollbar-thumb:hover {
     background: linear-gradient(180deg, #1d4ed8, #2562e9);
 }
-
-/* Loader Wrapper */
 .loader-wrapper {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: var(--bg-color-light); /* Matches light theme background */
+    background: var(--bg-color-light);
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 2000; /* Above all other content */
-    transition: opacity 0.5s ease; /* Smooth fade-out */
+    z-index: 2000;
+    transition: opacity 0.5s ease;
 }
 
 .dark .loader-wrapper {
-    background: var(--bg-color-dark); /* Matches dark theme background */
+    background: var(--bg-color-dark);
 }
 
 .loader-wrapper.hidden {
     opacity: 0;
-    pointer-events: none; /* Prevents interaction after fade-out */
+    pointer-events: none;
 }
 
-/* Loader */
 .loader {
     width: 45px;
     aspect-ratio: 1;
-    --c: no-repeat linear-gradient(var(--theme-blue) 0 0); /* Matches your theme blue */
+    --c: no-repeat linear-gradient(var(--theme-blue) 0 0);
     background: 
         var(--c) 0 0,
         var(--c) 0 100%, 
@@ -1134,16 +1131,4 @@
     0%, 10%   { background-size: 20% 100% }
     50%       { background-size: 20% 20% }
     90%, 100% { background-size: 100% 20% }
-}
-
-/* Hide content initially */
-body:not(.loaded) > *:not(.loader-wrapper) {
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.5s ease, visibility 0.5s ease;
-}
-
-body.loaded > *:not(.loader-wrapper) {
-    opacity: 1;
-    visibility: visible;
 }
