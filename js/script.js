@@ -20,7 +20,8 @@
     skillsSection: document.getElementById('skills'),
     timelineItems: document.querySelectorAll('.timeline-item'),
     timelineSection: document.getElementById('timeline'),
-    resumeLink: document.getElementById('download-resume')
+    resumeLink: document.getElementById('download-resume'),
+    loaderContainer: document.querySelector('.loader-container') // Add loader container
   };
 
   // Theme management
@@ -68,6 +69,18 @@
       clearTimeout(timeout);
       timeout = setTimeout(() => func.apply(this, args), wait);
     };
+  }
+
+  // Loader function
+  function hideLoader() {
+    const { loaderContainer } = elements;
+    if (loaderContainer) {
+      document.body.classList.add('loading'); // Lock body during loading
+      setTimeout(() => {
+        loaderContainer.classList.add('hidden'); // Hide loader
+        document.body.classList.remove('loading'); // Unlock body
+      }, 1000); // 2000ms delay
+    }
   }
 
   // Scroll handling
@@ -188,12 +201,210 @@
       setupSignatureHover();
       loadTypedJs();
       handleScroll(); // Initial call for animations
+      hideLoader(); // Call loader function on page load
     });
   }
 
   // Initialize
   setupEventListeners();
 })();
+
+// (function () {
+//   // Cached DOM elements
+//   const elements = {
+//     themeToggleDesktop: document.getElementById('theme-toggle-desktop'),
+//     themeToggleMobile: document.getElementById('theme-toggle-mobile'),
+//     themeIconDesktop: document.getElementById('theme-icon-desktop'),
+//     themeIconMobile: document.getElementById('theme-icon-mobile'),
+//     signature: document.querySelector('.signature'),
+//     menuToggle: document.getElementById('menu-toggle'),
+//     mobileMenu: document.getElementById('mobile-menu'),
+//     scrollProgressBar: document.querySelector('.scroll-progress-bar'),
+//     backToTop: document.getElementById('back-to-top'),
+//     desktopHeader: document.getElementById('desktop-header'),
+//     mobileTopHeader: document.getElementById('mobile-top-header'),
+//     mobileBottomNav: document.getElementById('mobile-bottom-nav'),
+//     headerTextElements: document.querySelectorAll(
+//       '#desktop-header .signature, #mobile-top-header .signature, #mobile-bottom-nav .signature'
+//     ),
+//     skillBars: document.querySelectorAll('.skill-progress-bar'),
+//     skillsSection: document.getElementById('skills'),
+//     timelineItems: document.querySelectorAll('.timeline-item'),
+//     timelineSection: document.getElementById('timeline'),
+//     resumeLink: document.getElementById('download-resume')
+//   };
+
+//   // Theme management
+//   function setTheme(isDarkMode) {
+//     try {
+//       const { signature, themeIconDesktop, themeIconMobile } = elements;
+//       document.documentElement.classList.toggle('dark', isDarkMode);
+//       if (themeIconDesktop) themeIconDesktop.classList.toggle('fa-moon', !isDarkMode);
+//       if (themeIconDesktop) themeIconDesktop.classList.toggle('fa-sun', isDarkMode);
+//       if (themeIconMobile) themeIconMobile.classList.toggle('fa-moon', !isDarkMode);
+//       if (themeIconMobile) themeIconMobile.classList.toggle('fa-sun', isDarkMode);
+//       signature.style.color = '#2563eb'; // Default blue
+//       localStorage.setItem('theme', isDarkMode ? 'dark' : 'light');
+//     } catch (error) {
+//       console.error('Theme toggle error:', error);
+//     }
+//   }
+
+//   // Initialize theme
+//   function initializeTheme() {
+//     const prefersDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
+//     const savedTheme = localStorage.getItem('theme');
+//     setTheme(savedTheme === 'dark' || (!savedTheme && prefersDarkMode));
+//   }
+
+//   // Mobile menu management
+//   function toggleMobileMenu(event) {
+//     event?.stopPropagation();
+//     const { menuToggle, mobileMenu } = elements;
+//     if (!menuToggle || !mobileMenu) return;
+//     const isOpen = mobileMenu.classList.contains('opacity-100');
+//     menuToggle.classList.toggle('open', !isOpen);
+//     mobileMenu.classList.toggle('opacity-100', !isOpen);
+//     mobileMenu.classList.toggle('scale-100', !isOpen);
+//     mobileMenu.classList.toggle('pointer-events-auto', !isOpen);
+//     mobileMenu.classList.toggle('opacity-0', isOpen);
+//     mobileMenu.classList.toggle('scale-95', isOpen);
+//     mobileMenu.classList.toggle('pointer-events-none', isOpen);
+//   }
+
+//   // Debounce utility
+//   function debounce(func, wait) {
+//     let timeout;
+//     return function (...args) {
+//       clearTimeout(timeout);
+//       timeout = setTimeout(() => func.apply(this, args), wait);
+//     };
+//   }
+
+//   // Scroll handling
+//   const scrollThreshold = 50;
+//   let animatedSkills = false;
+//   let animatedTimeline = false;
+
+//   function handleScroll() {
+//     requestAnimationFrame(() => {
+//       const { scrollProgressBar, backToTop, desktopHeader, mobileTopHeader, mobileBottomNav, headerTextElements } = elements;
+//       const scrollTop = window.scrollY;
+//       const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+//       const scrollPercent = (scrollTop / docHeight) * 100;
+//       scrollProgressBar.style.width = `${scrollPercent}%`;
+
+//       const isDarkMode = document.documentElement.classList.contains('dark');
+//       const isScrolled = scrollTop > scrollThreshold;
+
+//       backToTop.classList.toggle('visible', isScrolled);
+//       desktopHeader?.classList.toggle('header-scrolled', isScrolled);
+//       mobileTopHeader?.classList.toggle('header-scrolled', isScrolled);
+//       mobileBottomNav?.classList.toggle('header-scrolled', isScrolled);
+
+//       headerTextElements.forEach((element) => {
+//         element.style.color = isScrolled ? (isDarkMode ? '#ffffff' : '#000000') : '#2563eb';
+//       });
+
+//       // Skills animation
+//       if (!animatedSkills && elements.skillsSection.getBoundingClientRect().top < window.innerHeight * 0.8) {
+//         elements.skillBars.forEach(bar => {
+//           const width = bar.getAttribute('data-width') || bar.style.width;
+//           bar.style.width = '0';
+//           setTimeout(() => bar.style.width = width, 100);
+//         });
+//         animatedSkills = true;
+//       }
+
+//       // Timeline animation
+//       if (!animatedTimeline && elements.timelineSection.getBoundingClientRect().top < window.innerHeight * 0.8) {
+//         elements.timelineItems.forEach((item, index) => {
+//           setTimeout(() => item.classList.add('visible'), index * 300);
+//         });
+//         animatedTimeline = true;
+//       }
+//     });
+//   }
+
+//   // Resume download
+//   function handleResumeDownload(event) {
+//     event.preventDefault();
+//     const resumeUrl = '/images/resume.pdf';
+//     const link = document.createElement('a');
+//     link.href = resumeUrl;
+//     link.download = 'Hamza_Resume.pdf';
+//     document.body.appendChild(link);
+//     link.click();
+//     document.body.removeChild(link);
+
+//     fetch(resumeUrl)
+//       .then(response => {
+//         if (!response.ok) throw new Error('Resume not found');
+//       })
+//       .catch(() => {
+//         alert('Error downloading resume. Please try again later.');
+//       });
+//   }
+
+//   // Signature hover effects
+//   function setupSignatureHover() {
+//     const { signature } = elements;
+//     if (!signature) return;
+//     signature.addEventListener('mouseover', () => {
+//       signature.style.color = '#2563eb';
+//     });
+//     signature.addEventListener('mouseout', () => {
+//       signature.style.color = document.documentElement.classList.contains('dark') ? '#ffffff' : '#2c3e50';
+//     });
+//     signature.style.color = '#2563eb'; // Initial color
+//   }
+
+//   // Lazy-load Typed.js
+//   function loadTypedJs() {
+//     if (!document.getElementById('typed-name')) return;
+//     const script = document.createElement('script');
+//     script.src = 'https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js';
+//     script.onload = () => {
+//       new Typed('#typed-name', {
+//         strings: ["Hamza.", "A Frontend Developer.", "An Associate Engineer."],
+//         typeSpeed: 70,
+//         backSpeed: 30,
+//         loop: true,
+//         showCursor: true,
+//         cursorChar: '|'
+//       });
+//     };
+//     script.onerror = () => console.error('Failed to load Typed.js');
+//     document.head.appendChild(script);
+//   }
+
+//   // Event listeners
+//   function setupEventListeners() {
+//     const { themeToggleDesktop, themeToggleMobile, menuToggle, mobileMenu, resumeLink } = elements;
+//     if (themeToggleDesktop) themeToggleDesktop.addEventListener('click', () => setTheme(!document.documentElement.classList.contains('dark')));
+//     if (themeToggleMobile) themeToggleMobile.addEventListener('click', () => setTheme(!document.documentElement.classList.contains('dark')));
+//     if (menuToggle) menuToggle.addEventListener('click', toggleMobileMenu);
+//     if (mobileMenu) {
+//       mobileMenu.querySelectorAll('a').forEach(link => link.addEventListener('click', toggleMobileMenu));
+//       document.body.addEventListener('click', (event) => {
+//         if (!menuToggle?.contains(event.target) && !mobileMenu.contains(event.target) && mobileMenu.classList.contains('opacity-100')) {
+//           toggleMobileMenu();
+//         }
+//       });
+//     }
+//     if (resumeLink) resumeLink.addEventListener('click', handleResumeDownload);
+//     window.addEventListener('scroll', debounce(handleScroll, 10));
+//     window.addEventListener('load', () => {
+//       initializeTheme();
+//       setupSignatureHover();
+//       loadTypedJs();
+//       handleScroll(); // Initial call for animations
+//     });
+//   }
+
+//   // Initialize
+//   setupEventListeners();
+// })();
 
 
 

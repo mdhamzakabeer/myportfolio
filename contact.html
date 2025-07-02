@@ -2,70 +2,74 @@
 <html lang="en" class="scroll-smooth">
 
 <head>
-  <meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<meta name="description" content="Contact Muhammad Hamza Kabeer — Frontend Developer. Reach out for collaboration, project inquiries, or freelance web development work." />
-<meta name="keywords" content="Contact Hamza, Connect Web Developer, Hire Frontend Developer, Freelance Web Projects, Frontend Engineer Pakistan" />
-<meta name="author" content="Muhammad Hamza Kabeer" />
-<meta name="robots" content="index, follow" />
-<meta property="og:title" content="Contact | Hamza - Frontend Developer" />
-<meta property="og:description" content="Get in touch with Hamza for professional frontend development projects, freelance work, or collaborations." />
-<link rel="icon" href="assets/images/muhammadhamzakabeer.png" type="image/png" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description"
+        content="Contact Muhammad Hamza Kabeer — Frontend Developer. Reach out for collaboration, project inquiries, or freelance web development work." />
+    <meta name="keywords"
+        content="Contact Hamza, Connect Web Developer, Hire Frontend Developer, Freelance Web Projects, Frontend Engineer Pakistan" />
+    <meta name="author" content="Muhammad Hamza Kabeer" />
+    <meta name="robots" content="index, follow" />
+    <meta property="og:title" content="Contact | Hamza - Frontend Developer" />
+    <meta property="og:description"
+        content="Get in touch with Hamza for professional frontend development projects, freelance work, or collaborations." />
+    <link rel="icon" href="assets/images/muhammadhamzakabeer.png" type="image/png" />
     <title>Muhammad Hamza Kabeer | Frontend Developer Portfolio</title>
     <link rel="stylesheet" href="css/contact.css">
-       <script src="https://cdn.tailwindcss.com"></script>
- <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-<link href="https://cdn.jsdelivr.net/npm/sweetalert2@11.12.0/dist/sweetalert2.min.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11.12.0/dist/sweetalert2.min.css" rel="stylesheet">
     <script>
-    tailwind.config = {
-        darkMode: 'class',
-        theme: {
-            extend: {
-                screens: {
-                    'xs': '475px',
-                },
-                keyframes: {
-                    slideIn: {
-                        '0%': { transform: 'translateY(20px)', opacity: '0' },
-                        '100%': { transform: 'translateY(0)', opacity: '1' },
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    screens: {
+                        'xs': '475px',
                     },
-                    progress: {
-                        '0%': { width: '0%' },
-                        '100%': { width: '100%' },
+                    keyframes: {
+                        slideIn: {
+                            '0%': { transform: 'translateY(20px)', opacity: '0' },
+                            '100%': { transform: 'translateY(0)', opacity: '1' },
+                        },
+                        progress: {
+                            '0%': { width: '0%' },
+                            '100%': { width: '100%' },
+                        },
+                        fadeIn: {
+                            '0%': { opacity: '0' },
+                            '100%': { opacity: '1' },
+                        },
+                        timelineSlideLeft: {
+                            '0%': { transform: 'translateX(-50px)', opacity: '0' },
+                            '100%': { transform: 'translateX(0)', opacity: '1' },
+                        },
+                        timelineSlideRight: {
+                            '0%': { transform: 'translateX(50px)', opacity: '0' },
+                            '100%': { transform: 'translateX(0)', opacity: '1' },
+                        },
+                        scalePulse: {
+                            '0%': { transform: 'scale(1)' },
+                            '50%': { transform: 'scale(1.1)' },
+                            '100%': { transform: 'scale(1)' },
+                        },
                     },
-                    fadeIn: {
-                        '0%': { opacity: '0' },
-                        '100%': { opacity: '1' },
+                    animation: {
+                        slideIn: 'slideIn 0.5s ease-out',
+                        progress: 'progress 0.5s ease-out',
+                        fadeIn: 'fadeIn 0.5s ease-out',
+                        timelineSlideLeft: 'timelineSlideLeft 0.6s ease-out forwards',
+                        timelineSlideRight: 'timelineSlideRight 0.6s ease-out forwards',
+                        scalePulse: 'scalePulse 0.4s ease-in-out',
                     },
-                    timelineSlideLeft: {
-                        '0%': { transform: 'translateX(-50px)', opacity: '0' },
-                        '100%': { transform: 'translateX(0)', opacity: '1' },
-                    },
-                    timelineSlideRight: {
-                        '0%': { transform: 'translateX(50px)', opacity: '0' },
-                        '100%': { transform: 'translateX(0)', opacity: '1' },
-                    },
-                    scalePulse: {
-                        '0%': { transform: 'scale(1)' },
-                        '50%': { transform: 'scale(1.1)' },
-                        '100%': { transform: 'scale(1)' },
-                    },
-                },
-                animation: {
-                    slideIn: 'slideIn 0.5s ease-out',
-                    progress: 'progress 0.5s ease-out',
-                    fadeIn: 'fadeIn 0.5s ease-out',
-                    timelineSlideLeft: 'timelineSlideLeft 0.6s ease-out forwards',
-                    timelineSlideRight: 'timelineSlideRight 0.6s ease-out forwards',
-                    scalePulse: 'scalePulse 0.4s ease-in-out',
-                },
+                }
             }
-        }
-    };
-</script>
-    
+        };
+    </script>
+
 </head>
 
 <body class="text-gray-800 dark:text-white font-sans scroll-smooth min-h-screen flex flex-col">
@@ -182,13 +186,13 @@
                 <a href="mailto:your.email@example.com"
                     class="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-600 transition text-2xl sm:text-3xl"
                     aria-label="Email Hamza"><i class="fas fa-envelope-square"></i></a>
-                <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer"
+                <a href="https://www.linkedin.com/in/muhammad-hamza-kabeer/" target="_blank" rel="noopener noreferrer"
                     class="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-600 transition text-2xl sm:text-3xl"
                     aria-label="Hamza's LinkedIn Profile"><i class="fab fa-linkedin"></i></a>
-                <a href="https://github.com/yourprofile" target="_blank" rel="noopener noreferrer"
+                <a href="https://github.com/mdhamzakabeer" target="_blank" rel="noopener noreferrer"
                     class="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-600 transition text-2xl sm:text-3xl"
                     aria-label="Hamza's GitHub Profile"><i class="fab fa-github-square"></i></a>
-                <a href="https://twitter.com/yourprofile" target="_blank" rel="noopener noreferrer"
+                <a href="#" target="_blank" rel="noopener noreferrer"
                     class="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-600 transition text-2xl sm:text-3xl"
                     aria-label="Hamza's Twitter Profile"><i class="fab fa-twitter-square"></i></a>
             </div>

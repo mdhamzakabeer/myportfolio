@@ -216,6 +216,7 @@ body {
 .nav-link-icon:hover::after {
     width: 100%;
 }
+
 .nav-link-icon:hover,
 .desktop-nav-item:hover {
     color: inherit !important;
@@ -608,6 +609,7 @@ footer {
     }
 }
 
+
 @media (max-width: 768px) {
     .back-to-top {
         z-index: 60;
@@ -623,6 +625,28 @@ footer {
 
     .nav-link-icon span {
         font-size: 0.65rem;
+    }
+
+    @media (max-width: 475px) {
+        .contact-form button {
+            padding: 0.5rem 1rem;
+            /* Reduce padding to make it smaller */
+            font-size: 0.9rem;
+            /* Adjust font size if needed */
+        }
+
+        /* Ensure both buttons have the same size */
+        .contact-form button,
+        [type="button"][data-provider="google"] {
+            /* Adjust selector based on your HTML class for Google button */
+            min-width: 120px;
+            /* Set a consistent minimum width */
+            height: 40px;
+            /* Set a consistent height */
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
     }
 }
 

@@ -777,3 +777,155 @@
          ::-webkit-scrollbar-thumb:hover {
              background: linear-gradient(180deg, #1d4ed8, #2562e9);
          }
+
+         /* Lock body and hide scrollbar during loading */
+         body.loading {
+             overflow: hidden;
+             height: 100vh;
+         }
+
+         /* Loader Container */
+         .loader-container {
+             position: fixed;
+             top: 0;
+             left: 0;
+             width: 100%;
+             height: 100vh;
+             display: flex;
+             justify-content: center;
+             align-items: center;
+             background-color: #1a202c;
+             z-index: 10000;
+             transition: opacity 0.5s ease;
+         }
+
+         /* Dark theme consistency */
+         .dark .loader-container {
+             background-color: #1a202c;
+         }
+
+         /* Hide loader when not needed */
+         .loader-container.hidden {
+             opacity: 0;
+             visibility: hidden;
+             pointer-events: none;
+         }
+
+         /* Square Loader */
+         .loader {
+             --s: 20px;
+             /* Base size */
+             --_d: calc(0.353 * var(--s));
+             /* Diagonal offset for clip-path */
+             width: calc(var(--s) + var(--_d));
+             aspect-ratio: 1;
+             display: grid;
+             position: relative;
+         }
+
+         /* Pseudo-elements for loader */
+         .loader:before,
+         .loader:after {
+             content: "";
+             grid-area: 1/1;
+             clip-path: polygon(var(--_d) 0, 100% 0, 100% calc(100% - var(--_d)), calc(100% - var(--_d)) 100%, 0 100%, 0 var(--_d));
+             background: conic-gradient(from -90deg at calc(100% - var(--_d)) var(--_d),
+                     #2BDEAC 135deg, #F028FD 0 270deg, #D8CCE6 0);
+             /* Colors from your pyramid loader */
+             animation: l6 2s infinite;
+         }
+
+         /* Delay for second element to create chasing effect */
+         .loader:after {
+             animation-delay: -1s;
+         }
+
+
+         /* Animation for square path movement */
+         @keyframes l6 {
+             0% {
+                 transform: translate(0, 0);
+             }
+
+             25% {
+                 transform: translate(30px, 0);
+             }
+
+             50% {
+                 transform: translate(30px, 30px);
+             }
+
+             75% {
+                 transform: translate(0, 30px);
+             }
+
+             100% {
+                 transform: translate(0, 0);
+             }
+         }
+
+         /* Optional shadow for depth */
+         .loader:after {
+             box-shadow: 0 0 10px rgba(139, 90, 213, 0.5);
+             /* Subtle glow using your shadow color */
+         }
+
+         /* Responsive adjustments for medium screens */
+         @media (max-width: 768px) {
+             .loader {
+                 --s: 15px;
+                 /* Smaller base size */
+             }
+
+             @keyframes l6 {
+                 0% {
+                     transform: translate(0, 0);
+                 }
+
+                 25% {
+                     transform: translate(20px, 0);
+                 }
+
+                 50% {
+                     transform: translate(20px, 20px);
+                 }
+
+                 75% {
+                     transform: translate(0, 20px);
+                 }
+
+                 100% {
+                     transform: translate(0, 0);
+                 }
+             }
+         }
+
+         /* Responsive adjustments for small screens */
+         @media (max-width: 475px) {
+             .loader {
+                 --s: 10px;
+                 /* Even smaller base size */
+             }
+
+             @keyframes l6 {
+                 0% {
+                     transform: translate(0, 0);
+                 }
+
+                 25% {
+                     transform: translate(15px, 0);
+                 }
+
+                 50% {
+                     transform: translate(15px, 15px);
+                 }
+
+                 75% {
+                     transform: translate(0, 15px);
+                 }
+
+                 100% {
+                     transform: translate(0, 0);
+                 }
+             }
+         }

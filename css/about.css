@@ -18,7 +18,8 @@
     --signature-hover-color: #2563eb;
     /* Blue on hover */
     --signature-color-dark: #fff;
-     --loader-bar-color: #000; /* Light theme default (black) */
+    --loader-bar-color: #000;
+    /* Light theme default (black) */
 }
 
 .dark {
@@ -38,7 +39,8 @@
     /* Blue for dark theme */
     --signature-hover-color: #2563eb;
     /* Blue on hover */
-      --loader-bar-color: #fff; /* Dark theme loader bar (white) */
+    --loader-bar-color: #fff;
+    /* Dark theme loader bar (white) */
 }
 
 .fixed-bg {
@@ -63,6 +65,7 @@
         radial-gradient(circle at 1px 1px, var(--dot-color-dark) 1px, transparent 0),
         linear-gradient(to bottom, var(--gradient-start-dark), var(--gradient-end-dark));
 }
+
 .signature-container {
     text-align: center;
 }
@@ -1090,4 +1093,3 @@
 ::-webkit-scrollbar-thumb:hover {
     background: linear-gradient(180deg, #1d4ed8, #2562e9);
 }
-
