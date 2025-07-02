@@ -70,37 +70,51 @@
     </script>
     <link rel="preload" href="https://cdn.jsdelivr.net/npm/sweetalert2@11" as="script">
   <style>
-    /* Ye tera loader ka CSS yahan paste kar de */
     .loader-wrapper {
-      position: fixed;
-      top: 0; left: 0;
-      width: 100vw; height: 100vh;
-      background: white; /* ya dark mode ke liye var(--bg-color-dark) */
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      z-index: 9999;
-      transition: opacity 0.5s ease;
-    }
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw; height: 100vh;
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  transition: opacity 0.5s ease;
+}
 
-    .loader-wrapper.hidden {
-      opacity: 0;
-      pointer-events: none;
-    }
+.loader-wrapper.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
 
-    .loader {
-      width: 45px;
-      height: 45px;
-      border: 5px solid #3b82f6;
-      border-top-color: transparent;
-      border-radius: 50%;
-      animation: spin 1s linear infinite;
-    }
+/* New loader animation CSS */
+.loader {
+  width: 45px;
+  aspect-ratio: 1;
+  --c: no-repeat linear-gradient(#000 0 0);
+  background: var(--c), var(--c), var(--c), var(--c), var(--c), var(--c);
+  animation: 
+    l14-1 0.5s infinite alternate,
+    l14-2 2s infinite;
+}
 
-    @keyframes spin {
-      to { transform: rotate(360deg); }
-    }
+@keyframes l14-1 {
+  0%, 10% {
+    background-size: 20% 100%;
+  }
+  100% {
+    background-size: 20% 20%;
+  }
+}
 
+@keyframes l14-2 {
+  0%, 49.9% {
+    background-position: 0 0, 0 100%, 50% 50%, 50% 50%, 100% 0, 100% 100%;
+  }
+  50%, 100% {
+    background-position: 0 50%, 0 50%, 50% 0, 50% 100%, 100% 50%, 100% 50%;
+  }
+}
     html, body {
       visibility: hidden;
       overflow: hidden;
@@ -519,7 +533,7 @@
         setTimeout(() => {
           loader.style.display = 'none';
         }, 500);
-      }, 1000);
+      }, 2000);
     });
   </script>
 
