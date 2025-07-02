@@ -8,7 +8,6 @@ import { initModal } from './modal.js';
 import { initNavigation } from './navigation.js';
 import { initTestimonials } from './testimonials.js';
 import { initSignature } from './signature.js';
-import { initLoader } from './loader.js';
 
 // Initialize all modules
 document.addEventListener('DOMContentLoaded', () => {
@@ -20,5 +19,4 @@ document.addEventListener('DOMContentLoaded', () => {
     initNavigation();
     initTestimonials();
     initSignature();
-    initLoader();
 });
