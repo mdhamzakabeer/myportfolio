@@ -25,20 +25,18 @@ export function initAnimations() {
 
     skillItems.forEach(item => skillsObserver.observe(item));
 
-function animateTimeline() {
-    if (timelineAnimated) return;
-    const sectionTop = timelineSection.getBoundingClientRect().top;
-    if (sectionTop < window.innerHeight * 0.8) {
-        setTimeout(() => { // Yeh outer setTimeout add karo
+    function animateTimeline() {
+        if (timelineAnimated) return;
+        const sectionTop = timelineSection.getBoundingClientRect().top;
+        if (sectionTop < window.innerHeight * 0.8) {
             timelineItems.forEach((item, index) => {
                 setTimeout(() => {
                     item.classList.add('visible');
                 }, index * 300);
             });
             timelineAnimated = true;
-        }, 100); // 100ms ka delay
+        }
     }
-}
 
     window.addEventListener('scroll', animateTimeline);
     window.addEventListener('load', animateTimeline);
