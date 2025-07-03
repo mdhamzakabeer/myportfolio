@@ -75,11 +75,11 @@
   function hideLoader() {
     const { loaderContainer } = elements;
     if (loaderContainer) {
-      document.body.classList.add('loading'); // Lock body during loading
+      document.body.classList.add('loading'); 
       setTimeout(() => {
-        loaderContainer.classList.add('hidden'); // Hide loader
-        document.body.classList.remove('loading'); // Unlock body
-      }, 1000); // 2000ms delay
+        loaderContainer.classList.add('hidden'); 
+        document.body.classList.remove('loading'); 
+      }, 2000); 
     }
   }
 
